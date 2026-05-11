@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nano-budget"
+version = "0.1.0"
+description = "Token & cost tracker for nano-eco — aggregate spending across all agents, tools, and components"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+keywords = ["llm", "cost", "tokens", "budget", "nano-eco", "observability"]
+
+dependencies = ["typer>=0.9", "rich>=13"]
+
+[project.scripts]
+nano-budget = "nano_budget.cli:app"
+
+[tool.setuptools.packages.find]
+include = ["nano_budget*"]
